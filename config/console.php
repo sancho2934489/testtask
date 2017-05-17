@@ -24,10 +24,10 @@ $config = [
 
         'authManager' => [
             'class' => 'yii\rbac\PhpManager',
-            'itemFile' => '@app/rbac/items.php',
+            /*'itemFile' => '@app/rbac/items.php',
             'ruleFile' => '@app/rbac/rules.php',
             'assignmentFile' => '@app/rbac/assignments.php', // назначения придется указать, потому что того требуют каноны церкви
-            'defaultRoles' => ['admin','admin2'],
+            'defaultRoles' => ['admin','admin2'],*/
         ],
     ],
     'params' => $params,

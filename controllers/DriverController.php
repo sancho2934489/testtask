@@ -5,6 +5,7 @@ namespace app\controllers;
 use Yii;
 use app\models\Driver;
 use app\models\DriverSearch;
+use yii\filters\AccessControl;
 use yii\web\Controller;
 use yii\web\ForbiddenHttpException;
 use yii\web\NotFoundHttpException;

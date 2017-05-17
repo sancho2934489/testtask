@@ -8,7 +8,6 @@
 
 namespace app\commands;
 
-use app\rbac\UserGroupRule;
 use Yii;
 use yii\console\Controller;
 
@@ -49,13 +48,6 @@ class RbacController extends Controller
         $authManager->add($active);
         $authManager->add($time);
 
-        $userGroupRule = new UserGroupRule();
-        $authManager->add($userGroupRule);
-
-        $guest->ruleName  = $userGroupRule->name;
-        $admin->ruleName  = $userGroupRule->name;
-        $admin2->ruleName  = $userGroupRule->name;
-
         $authManager->add($guest);
         $authManager->add($admin);
         $authManager->add($admin2);
@@ -66,7 +58,6 @@ class RbacController extends Controller
         $authManager->addChild($guest, $view);
 
         $authManager->addChild($admin,$guest);
-        $authManager->addChild($admin,$view);
         $authManager->addChild($admin,$update);
         $authManager->addChild($admin, $index);
         $authManager->addChild($admin, $create);

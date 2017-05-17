@@ -32,7 +32,6 @@ return [
     ],
     'guest' => [
         'type' => 1,
-        'ruleName' => 'userGroup',
         'children' => [
             'login',
             'logout',
@@ -42,10 +41,8 @@ return [
     ],
     'admin' => [
         'type' => 1,
-        'ruleName' => 'userGroup',
         'children' => [
             'guest',
-            'view',
             'update',
             'index',
             'create',
@@ -55,7 +52,6 @@ return [
     ],
     'admin2' => [
         'type' => 1,
-        'ruleName' => 'userGroup',
         'children' => [
             'admin',
             'delete',
